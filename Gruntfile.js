@@ -24,6 +24,10 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     watch: {
+      ember_templates: {
+        files: 'app/templates/**/*.handlebars',
+        tasks: 'ember_templates'
+      },
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
         tasks: ['coffee:dist']
@@ -254,7 +258,7 @@ module.exports = function (grunt) {
           }
         },
         files: {
-          "app/scripts/templates.js": "app/templates/*.handlebars"
+          "app/scripts/templates.js": "app/templates/**/*.handlebars"
         }
       }
     }
