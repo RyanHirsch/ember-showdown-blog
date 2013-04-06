@@ -1,6 +1,6 @@
 /*global define */
-define([], function () {
+define(['ember'], function (Ember) {
     'use strict';
-
-    return '\'Allo \'Allo!';
+    var HelloEmber = Ember.Application.create();
+    return HelloEmber;
 });
