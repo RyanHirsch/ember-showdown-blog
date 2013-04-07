@@ -5,7 +5,8 @@ require.config({
     handlebars: '../components/handlebars/handlebars',
     ember: '../components/ember/ember',
     showdown: '../components/showdown/compressed/showdown',
-    moment: '../components/moment/moment'
+    moment: '../components/moment/moment',
+    'ember-data': '//cloud.github.com/downloads/emberjs/data/ember-data-latest'
   },
   shim: {
     bootstrap: {
@@ -21,7 +22,7 @@ require.config({
       exports: 'Handlebars'
     },
     app: {
-      deps: ['bootstrap', 'templates']
+      deps: ['bootstrap', 'ember', 'ember-data', 'templates']
     },
     showdown: {
       exports: 'Showdown'
@@ -30,6 +31,9 @@ require.config({
       exports: 'moment'
     },
     templates: {
+      deps: ['ember']
+    },
+    'ember-data': {
       deps: ['ember']
     }
   }
