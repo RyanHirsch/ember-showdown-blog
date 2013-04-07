@@ -3,7 +3,7 @@ require.config({
     jquery: '../components/jquery/jquery',
     bootstrap: 'vendor/bootstrap',
     handlebars: '../components/handlebars/handlebars',
-    ember: '../components/ember/ember',
+    ember: '../components/ember',
     showdown: '../components/showdown/compressed/showdown',
     moment: '../components/moment/moment',
     'ember-data': '../components/ember-data/ember-data'
