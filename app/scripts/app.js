@@ -9,8 +9,17 @@ define([], function () {
   });
 
   App.Router.map(function () {
-    this.resource('posts');
+    this.resource('posts', function() {
+      //Nested Route with dynamic segment
+      this.resource('post', {path: ':post_id'});
+    });
     this.resource('about');
+  });
+
+  App.PostsRoute = Ember.Route.extend({
+    model: function() {
+      return App.Post.find();
+    }
   });
 
   App.Post = DS.Model.extend({
