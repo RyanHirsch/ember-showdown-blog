@@ -39,5 +39,14 @@ define([], function () {
     extended: "I want this for my ORM"
   }];
 
+  Ember.Handlebars.registerBoundHelper('date', function(date) {
+    return moment(date).fromNow();
+  });
+
+  var showdown = new Showdown.converter();
+  Ember.Handlebars.registerBoundHelper('markdown', function(markdownText) {
+    return new Ember.Handlebars.SafeString(showdown.makeHtml(markdownText));
+  });
+
   return App;
 });

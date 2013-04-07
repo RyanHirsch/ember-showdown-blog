@@ -22,7 +22,7 @@ require.config({
       exports: 'Handlebars'
     },
     app: {
-      deps: ['bootstrap', 'ember', 'ember-data', 'templates']
+      deps: ['bootstrap', 'ember', 'ember-data', 'templates', 'moment', 'showdown']
     },
     showdown: {
       exports: 'Showdown'
