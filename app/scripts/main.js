@@ -6,7 +6,7 @@ require.config({
     ember: '../components/ember/ember',
     showdown: '../components/showdown/compressed/showdown',
     moment: '../components/moment/moment',
-    'ember-data': '//cloud.github.com/downloads/emberjs/data/ember-data-latest'
+    'ember-data': '../components/ember-data/ember-data'
   },
   shim: {
     bootstrap: {
