@@ -1,4 +1,4 @@
-/*global define */
+/* Ember and Ember-Data are shimmed in as deps */
 define([], function () {
   'use strict';
   var App = Ember.Application.create();
@@ -17,7 +17,7 @@ define([], function () {
     author: DS.attr('string'),
     intro: DS.attr('string'),
     extended: DS.attr('string'),
-    publishedAt: DS.attr('date'),
+    publishedAt: DS.attr('date')
   });
 
   App.Post.FIXTURES = [{
