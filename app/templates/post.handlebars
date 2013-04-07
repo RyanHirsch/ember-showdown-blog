@@ -1,5 +1,5 @@
 {{#if isEditing}}
-  Edit Mode
+  {{partial 'post/edit'}}
   <button {{action 'doneEditing'}}>Done</button>
 {{else}}
   <button {{action 'startEditing'}}>Edit</button>
