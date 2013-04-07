@@ -22,6 +22,16 @@ define([], function () {
     }
   });
 
+  App.PostController = Ember.ObjectController.extend({
+    isEditing: false,
+    startEditing: function() {
+      this.set('isEditing', true);
+    },
+    doneEditing: function() {
+      this.set('isEditing', false);
+    }
+  });
+
   App.Post = DS.Model.extend({
     title: DS.attr('string'),
     author: DS.attr('string'),
